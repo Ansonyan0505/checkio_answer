@@ -1,0 +1,17 @@
+def long_repeat(line):
+    """
+        length the longest substring that consists of the same char
+    """
+    # your code here
+    max_count = 0
+    count = 1 
+    if line != '':
+        for i in range(len(line)-1):          
+            if line[i+1] == line[i]:
+                count +=1
+            else:
+                max_count = max(max_count,count)
+                count = 1           
+        return max(max_count,count)
+    else:
+        return 0
