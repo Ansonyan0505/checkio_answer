@@ -1,0 +1,8 @@
+def count_words(text, words):
+#    result = 0
+    text = text.lower()
+#    result = sum(1 for word in words if word in text)
+#    for word in words:
+#        if word in text:
+#            result += 1
+    return sum(1 for word in words if word in text)
