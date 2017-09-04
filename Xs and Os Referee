@@ -1,0 +1,14 @@
+def checkio(game_result):
+    for i in game_result:
+        if i[0] == i[1] == i[2] and i[0]!= '.':
+            return i[0]
+    for i in range(3):        
+        if game_result[0][i] == game_result[1][i] == game_result[2][i] and game_result[0][i]!= '.':
+            return game_result[0][i]
+            
+    if game_result[0][0] == game_result[1][1] == game_result[2][2] and game_result[0][0]!= '.':
+            return game_result[0][0]
+            
+    if game_result[0][2] == game_result[1][1] == game_result[2][0] and game_result[0][2]!= '.':
+            return game_result[0][2]
+    return 'D'
